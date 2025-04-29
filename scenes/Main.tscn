@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqkbq0uedhwwi"]
+
+[ext_resource type="PackedScene" uid="uid://b7gyj32yka746" path="res://scenes/Weapon.tscn" id="1_elqb8"]
+
+[node name="Main" type="Node2D"]
+
+[node name="World" type="TileMap" parent="."]
+format = 2
+
+[node name="Terrain" type="TileMap" parent="World"]
+format = 2
+
+[node name="Itens" type="Node2D" parent="World"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+
+[node name="Weapon" parent="Player" instance=ExtResource("1_elqb8")]
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy" type="CharacterBody2D" parent="Enemies"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemies/Enemy"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Enemy"]
+
+[node name="VisionArea" type="Area2D" parent="Enemies/Enemy"]
+
+[node name="Weapon" parent="Enemies/Enemy" instance=ExtResource("1_elqb8")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="UI" type="CanvasLayer" parent="."]
