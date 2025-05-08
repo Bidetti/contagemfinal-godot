@@ -1,5 +1,4 @@
 @tool
-@icon("../life/icon_resource.png")
 extends Resource
 class_name ResourceLife
 

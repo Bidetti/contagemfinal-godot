@@ -1,4 +1,3 @@
-@icon("../character/icon_character.png")
 extends Node2D
 class_name ActorSprite
 
@@ -6,9 +5,9 @@ class_name ActorSprite
 enum State {IDLE,DEAD}
 
 @onready var sprite: SpriteCharacter = $Sprite
-@onready var weapon: Weapon = $Weapon
+#@onready var weapon: Weapon = $Weapon
 @onready var hitbox: Hitbox = $Hitbox
-@onready var particle_damage: Particle = $ParticleDamage
+#@onready var particle_damage: Particle = $ParticleDamage
 var state
 
 func _ready() -> void:
