@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://co5qpuj3hns3e"]
+
+[ext_resource type="PackedScene" uid="uid://skrlnoimlhsv" path="res://scenes/character/character.tscn" id="1_q22g1"]
+[ext_resource type="Texture2D" uid="uid://cb1puhmg81h5p" path="res://assets/character/player/sprite.png" id="2_2kxbm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0we05"]
+radius = 10.0499
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hi2a4"]
+radius = 7.0
+
+[node name="NinjaBlue" instance=ExtResource("1_q22g1")]
+script = null
+
+[node name="Hitbox" parent="." index="0"]
+script = null
+
+[node name="Shape" type="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_0we05")
+
+[node name="Shadow" parent="." index="1"]
+texture = null
+
+[node name="Sprite" parent="." index="2"]
+texture = ExtResource("2_2kxbm")
+script = null
+
+[node name="Shape" type="CollisionShape2D" parent="." index="3"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_hi2a4")
